@@ -7,6 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        
+        <!-- Find Button -->
+        <Button Content="Find" HorizontalAlignment="Center" Margin="0,149,0,0" VerticalAlignment="Top" Height="33" Width="167" Click="Button_Click"/>
+        
+        <!--user input-->
+        <TextBox x:Name="LocationBox" HorizontalAlignment="Center" Margin="0,73,0,0" TextWrapping="Wrap" Text="Enter Location" VerticalAlignment="Top" Width="167" Height="48"/>
+
+        <!-- Output TextBox -->
+        <TextBox x:Name="WeatherDetails" TextWrapping="Wrap" Text="Weather details here" Margin="252,217,248,10"/>
 
     </Grid>
 </Window>
