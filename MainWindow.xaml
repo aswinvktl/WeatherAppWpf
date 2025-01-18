@@ -5,7 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WeatherAppWpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        Background="SkyBlue"
+        > 
+        
+    
     <Grid>
         
         <!-- Find Button -->
@@ -15,7 +19,7 @@
         <TextBox x:Name="LocationBox" HorizontalAlignment="Center" Margin="0,73,0,0" TextWrapping="Wrap" Text="Enter Location" VerticalAlignment="Top" Width="167" Height="48"/>
 
         <!-- Output TextBox -->
-        <TextBox x:Name="WeatherDetails" TextWrapping="Wrap" Text="Weather details here" Margin="252,217,248,10"/>
+        <TextBox x:Name="WeatherDetails" TextWrapping="Wrap" Text="Weather details here" Margin="250,217,250,10"/>
 
     </Grid>
 </Window>
