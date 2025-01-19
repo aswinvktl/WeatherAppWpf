@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Media;
 
 namespace WeatherAppWpf
 {
@@ -17,10 +18,13 @@ namespace WeatherAppWpf
         {
             try
             {
+                // Clear the WeatherDetails box for new input
+                WeatherDetails.Text = "Fetching weather data...";
+
                 // Fetch weather data
                 string location = LocationBox.Text;
 
-                if (string.IsNullOrWhiteSpace(location))
+                if (string.IsNullOrWhiteSpace(location) || location == "Enter Location")
                 {
                     WeatherDetails.Text = "Please enter a valid location.";
                     return;
@@ -40,6 +44,25 @@ namespace WeatherAppWpf
             {
                 Console.WriteLine($"Unexpected error: {ex.Message}");
                 WeatherDetails.Text = $"Unexpected error: {ex.Message}";
+            }
+        }
+
+        // Placeholder logic for LocationBox
+        private void LocationBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (LocationBox.Text == "Enter Location")
+            {
+                LocationBox.Text = string.Empty;
+                LocationBox.Foreground = Brushes.Black; // Set text color for user input
+            }
+        }
+
+        private void LocationBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(LocationBox.Text))
+            {
+                LocationBox.Text = "Enter Location";
+                LocationBox.Foreground = Brushes.Gray; // Restore placeholder color
             }
         }
     }

@@ -10,7 +10,7 @@ namespace WeatherAppWpf
         private const string basicURL = "https://api.openweathermap.org/data/2.5/weather";
 
         // Hardcoded API Key
-        private const string ApiKey = ""; // left blank to push to github
+        private const string ApiKey = ""; // left like this to push to github
 
         // Helper method to build the complete API URL
         public string BuildUrl(string location)
