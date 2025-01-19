@@ -11,7 +11,8 @@
     <Grid>
 
         <!-- Find Button -->
-        <Button Content="Find" 
+        <Button x:Name="FindButton"
+            Content="Find" 
                 HorizontalAlignment="Center" Margin="0,124,0,0" 
                 VerticalAlignment="Top" 
                 Height="41" Width="156" 
@@ -61,7 +62,8 @@
                  Background="LightGray"
                  GotFocus="LocationBox_GotFocus" 
                  LostFocus="LocationBox_LostFocus"
-                 Text="Enter Location">
+                 Text="Enter Location"
+                 KeyDown="LocationBox_KeyDown">
             <TextBox.Template>
                 <ControlTemplate TargetType="TextBox">
                     <Border Background="{TemplateBinding Background}"

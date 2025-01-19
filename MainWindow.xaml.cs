@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 
 namespace WeatherAppWpf
@@ -57,12 +59,24 @@ namespace WeatherAppWpf
             }
         }
 
+        
         private void LocationBox_LostFocus(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(LocationBox.Text))
             {
                 LocationBox.Text = "Enter Location";
                 LocationBox.Foreground = Brushes.Gray; // Restore placeholder color
+            }
+        }
+
+        private void LocationBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Check if the Enter key was pressed
+            if (e.Key == Key.Enter)
+            {
+                // Simulate the Find button click
+                // This raises the Click event for the Find button programmatically
+                FindButton.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
             }
         }
     }
