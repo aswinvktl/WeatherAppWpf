@@ -3,10 +3,10 @@
 A lightweight **C# WPF** application for fetching and displaying weather data.  
 
 ## ✨ Features  
-✅ Get real-time weather updates  
-✅ Search for any city  
-✅ Toggle between **Celsius** and **Fahrenheit**  
-✅ Simple and clean UI  
+- View current weather conditions  
+- Search for weather by city  
+- Supports Celsius and Fahrenheit  
+- Simple WPF interface
 
 ## 🛠 Requirements  
 - Windows OS  
